@@ -79,11 +79,11 @@ CGFloat const distance_W_LabelHeader = 35.0;
     
     self.avatarImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 79, 69, 69)];
     self.avatarImage.image = avatarImage;
-    self.avatarImage.layer.cornerRadius = 10;
+    /*self.avatarImage.layer.cornerRadius = 10;
     self.avatarImage.layer.borderWidth = 3;
     self.avatarImage.layer.borderColor = [UIColor whiteColor].CGColor;
     self.avatarImage.clipsToBounds = YES;
-    
+    */
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 156, 250, 25)];
     self.titleLabel.text = titleString;
     
@@ -126,10 +126,6 @@ CGFloat const distance_W_LabelHeader = 35.0;
     self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.header insertSubview:self.headerImageView aboveSubview:self.headerLabel];
     self.header.clipsToBounds = YES;
-    
-    self.avatarImage.layer.cornerRadius = 10;
-    self.avatarImage.layer.borderWidth = 3;
-    self.avatarImage.layer.borderColor = [UIColor whiteColor].CGColor;
     
     self.blurImages = [[NSMutableArray alloc] init];
     
@@ -222,10 +218,10 @@ CGFloat const distance_W_LabelHeader = 35.0;
 {
     CGFloat factor = 0.1;
     [self.blurImages addObject:self.headerImageView.image];
-    for (NSUInteger i = 0; i < self.headerImageView.frame.size.height/10; i++) {
+    /*for (NSUInteger i = 0; i < self.headerImageView.frame.size.height/10; i++) {
         [self.blurImages addObject:[self.headerImageView.image boxblurImageWithBlur:factor]];
         factor+=0.04;
-    }
+    }*/
 }
 
 
